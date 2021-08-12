@@ -1,110 +1,41 @@
-<!DOCTYPE HTML>
-<!--
-	Solid State by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
-	<head>
-    	{% load static %}
-		<title>Solid State by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="/static/assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="/static/assets/css/noscript.css" /></noscript>
+   <body>
 
-        <!-- Scripts -->
-        <script src="/static/assets/js/jquery.min.js"></script>
-        <script src="/static/assets/js/jquery.scrollex.min.js"></script>
-        <script src="/static/assets/js/browser.min.js"></script>
-        <script src="/static/assets/js/breakpoints.min.js"></script>
-        <script src="/static/assets/js/util.js"></script>
-        <script src="/static/assets/js/main.js"></script>
-	</head>
-	<body class="is-preload">
+      <form name = "form" action = "{% url 'login' %}" method = "POST" >
+          {% csrf_token %}
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+         <div style = "max-width:470px;">
+            <center>
+               <input type = "text" style = "margin-left:20%;"
+                  placeholder = "Identifiant" name = "username" />
+            </center>
+         </div>
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<h1><a href="index.html">Solid State</a></h1>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
+         <br>
 
-				<!-- Menu -->
-					<nav id="menu">
-						<div class="inner">
-							<h2>Menu</h2>
-							<ul class="links">
-								<li><a href="index.html">Home</a></li>
-								<li><a href="generic.html">Generic</a></li>
-								<li><a href="elements.html">Elements</a></li>
-								<li><a href="#">Log In</a></li>
-								<li><a href="#">Sign Up</a></li>
-							</ul>
-							<a href="#" class="close">Close</a>
-						</div>
-					</nav>
+         <div style = "max-width:470px;">
+            <center>
+               <input type = "password" style = "margin-left:20%;"
+                  placeholder = "password" name = "password" />
+            </center>
+         </div>
 
-				<!-- Banner -->
-					
+         <br>
 
-				<!-- Wrapper -->
-					
+         <div style = "max-width:470px;">
+            <center>
 
-						<!-- Two -->
-							
+               <button style = "border:0px; background-color:#4285F4; margin-top:8%;
+                  height:35px; width:80%;margin-left:19%;" type = "submit"
+                  value = "Login" >
+                  <strong>Login</strong>
+               </button>
 
-						<!-- Three -->
-							
+            </center>
+         </div>
 
-						<!-- Four -->
+      </form>
 
-				<!-- Footer -->
-					<section id="footer">
-						<div class="inner">
-							<h2 class="major">Log in</h2>
-							<p>Be our member can get more information!!!</p>
-							<form name = "form" action = "{% url 'postsignIn' %}" method = "POST" >
-                                {% csrf_token %}
-								<div class="fields">
-									<div class="field">
-										<label for="username">username</label>
-										<input type="text" name="username" id="username" />
-									</div>
-									<div class="field">
-										<label for="password">password</label>
-										<input type="password" name="password" id="password" />
-									</div>
-									
-								</div>
-								<ul class="actions">
-                                    <li><button type="button"  onclick="location.href='{% url 'enroll' %} '" >enroll</button></li>
-								</ul>
-								<ul class="actions">
-									<li><input type="submit" value="login" /></li>
-								</ul>
-							</form>
-							<ul class="contact">
-								<li class="icon solid fa-home">
-									Untitled Inc<br />
-									1234 Somewhere Road Suite #2894<br />
-									Nashville, TN 00000-0000
-								</li>
-								<li class="icon solid fa-phone">(000) 000-0000</li>
-								<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
-								<li class="icon brands fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
-								<li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>
-								<li class="icon brands fa-instagram"><a href="#">instagram.com/untitled-tld</a></li>
-							</ul>
-							<ul class="copyright">
-								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</section>
-			</div>
-	</body>
+   </body>
 </html>
+

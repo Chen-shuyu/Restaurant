@@ -1,6 +1,6 @@
 from django import forms
 
-from allenapp.models import Dreamreal
+from myapp.models import Dreamreal
 
 
 class LoginForm(forms.Form):

@@ -10,19 +10,11 @@
 		<title>Solid State by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="/static/assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="/static/assets/css/noscript.css" /></noscript>
-
-        <!-- Scripts -->
-        <script src="/static/assets/js/jquery.min.js"></script>
-        <script src="/static/assets/js/jquery.scrollex.min.js"></script>
-        <script src="/static/assets/js/browser.min.js"></script>
-        <script src="/static/assets/js/breakpoints.min.js"></script>
-        <script src="/static/assets/js/util.js"></script>
-        <script src="/static/assets/js/main.js"></script>
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
-
+        <form name = "form" action = "{% url 'enroll' %}" method = "POST" >{% csrf_token %}
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
 
@@ -71,7 +63,7 @@
 						<div class="inner">
 							<h2 class="major">Enroll</h2>
 							<p>Be our member can get more information!!!</p>
-							<form name = "form" action = "{% url 'postsignUp' %}" method = "POST" >{% csrf_token %}
+							<form method="post" action="#">
 								<div class="fields">
 									<div class="field">
 										<label for="username">username</label>
@@ -114,6 +106,17 @@
 							</ul>
 						</div>
 					</section>
+
 			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			
+        </form>
 	</body>
 </html>
